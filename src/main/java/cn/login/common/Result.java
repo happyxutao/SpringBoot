@@ -6,6 +6,6 @@ import lombok.ToString;
 @Data
 public class Result<T> {
     private String message;
-    private String code;
+    private int  code;
     private T data;
 }

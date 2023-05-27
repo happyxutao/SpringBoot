@@ -19,7 +19,7 @@ public class EventDemoController {
     @Autowired
     ApplicationEventPublisher eventPublisher;
     @GetMapping("/pushObject")
-    public String pushObject(@RequestParam("code") String code,@RequestParam("message") String message) {
+    public String pushObject(@RequestParam("code") int code,@RequestParam("message") String message) {
         log.info("发布对象事件:{},{}", code, message);
         Result<Object> result = new Result<>();
         result.setCode(code);
